@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5rem;
+    gap: 5rem;
+    height: 100dvh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+}
+
+.highlight {
+    color: #007bff;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.toggle-buttons button {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.toggle-buttons .active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #0056b3, #004099);
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.or-divider .line {
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+}
+
+.or-divider span {
+    padding: 0 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.forgot-password {
+    font-size: 12px;
+    color: #007bff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Footer section*/
+.footer {
+    background: rgba(16, 17, 21, 0.913);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 3rem 10%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100dvw;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-logo h2 {
+    font-size: 2.2rem;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.footer-logo p {
+    font-size: 1.1rem;
+    color: #ddd;
+    max-width: 300px;
+    margin-top: 5px;
+}
+
+.footer-socials p,
+.footer-contact p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #4169e1;
+    transform: scale(1.1);
+}
+
+.contact-info a p {
+    font-size: 1rem;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}

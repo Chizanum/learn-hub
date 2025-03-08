@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Hub - Authentication</title>
+    <link rel="stylesheet" href="login-signup.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Sign up & login -->
+    <div class="container">
+        <div class="form-container">
+           <a href="index.html"><h1 class="title">Learn <span class="highlight">H</span>ub</h1></a> 
+            <p class="subtitle">Where learning meets simplicity 🚀</p>
+
+            <div class="form-box">
+                <div class="toggle-buttons">
+                    <button id="loginBtn" class="active">Login</button>
+                    <button id="signupBtn">Signup</button>
+                </div>
+
+                <form id="loginForm" class="form">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+
+                <form id="signupForm" class="form hidden">
+                    <input type="text" placeholder="Username" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                </form>
+
+                <div class="or-divider">
+                    <div class="line"></div>
+                    <span>or</span>
+                    <div class="line"></div>
+                </div>
+
+                <p class="forgot-password">Forgot password?</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo & Saying -->
+            <div class="footer-logo">
+                <h2>Learn <span style="color: blue; font-family: 'Bebas Neue', sans-serif;">H</span>ub</h2>
+                <p>Unlock your potential with world-class learning.</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-socials">
+                <p>Connect with us</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="footer-contact">
+                <p>Get in Touch</p>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i> <a href="mailto:support@learnhub.com">
+                        <p>support@learnhub.com</p>
+                    </a>
+                    <i class="fas fa-phone"></i> <a href="tel:+1234567890">
+                        <p>08076337789</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Learn Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="login-signup.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
