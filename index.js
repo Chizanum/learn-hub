@@ -1,8 +1,14 @@
 // Toggle the mobile menu when the hamburger is clicked
+/**
+ * This function initializes event listeners for the Learn Hub website.
+ * It toggles the mobile navigation menu when the hamburger button is clicked,
+ * and sets the "authForm" value in localStorage when specific buttons are clicked.
+ */
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const navBar = document.querySelector(".nav-bar");
 
+  // Toggle the mobile navigation menu when the hamburger button is clicked
   if (hamburger && navBar) {
     hamburger.addEventListener("click", function () {
       navBar.classList.toggle("active");
@@ -36,5 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 });
+
 
 
