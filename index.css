@@ -46,6 +46,61 @@ body {
     /* Adjust spacing between links */
 }
 
+.nav-item {
+    position: relative;
+}
+
+/* Update mega-dropdown positioning */
+.mega-dropdown {
+    position: fixed; /* Change from absolute to fixed */
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.nav-item:hover .mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mega-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-column {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.dropdown-column h3 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.dropdown-column a {
+    display: block;
+    padding: 0.5rem 0;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.dropdown-column a:hover {
+    color: #4169e1;
+}
 
 .nav-links a p {
     font-family: "Lato", sans-serif;
@@ -55,28 +110,12 @@ body {
 .nav-register {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 20%;
+    gap: 1rem;
+    margin-left: auto;
 }
 
 .nav-register-mobile {
     display: none;
-}
-
-.nav-register a button {
-    width: 5.6rem;
-    height: 2.2rem;
-    border: none;
-    background: #4169e1;
-    color: white;
-    border-radius: 16px;
-    font-weight: bold;
-    font-family: "Nunito", sans-serif;
-    transition: 0.3s;
-}
-
-.nav-register a button:hover {
-    background: #3554b0;
 }
 
 /* Hamburger menu styling */
@@ -94,6 +133,19 @@ body {
     background-color: #333;
     display: block;
     border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Responsive styles for mobile devices */
@@ -145,7 +197,285 @@ body {
         font-weight: bold;
         font-family: "Nunito", sans-serif;
     }
+
+    .mega-dropdown {
+        display: none;
+    }
+    
+    /* Add any specific mobile dropdown styles here */
 }
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    position: fixed;
+    top: 4rem; /* Match navbar height */
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background-color: white;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+/* Overlay when menu is open */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 998;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Add new mobile menu styles */
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mobile-nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.mobile-nav-header p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.mobile-nav-header i {
+    transition: transform 0.3s ease;
+    color: #666;
+}
+
+.mobile-nav-header.active i {
+    transform: rotate(180deg);
+    color: #4169e1;
+}
+
+.mobile-dropdown {
+    display: none;
+    padding: 0.5rem 0 1rem 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.mobile-dropdown.active {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+.mobile-dropdown a {
+    padding: 0.8rem 1rem;
+    display: block;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.mobile-dropdown a:hover {
+    color: #4169e1;
+}
+
+/* Style mobile buttons container */
+.mobile-menu .nav-register-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+}
+
+.mobile-menu .nav-register-mobile button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu #signupMobile {
+    background-color: #4169e1;
+    color: white;
+}
+
+.mobile-menu #loginMobile {
+    background-color: #f8f9fa;
+    color: #4169e1;
+    border: 2px solid #4169e1;
+}
+
+.mobile-menu #signupMobile:hover {
+    background-color: #3554b0;
+}
+
+.mobile-menu #loginMobile:hover {
+    background-color: #e8eeff;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add Resources link styling */
+.mobile-nav-links > a {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.mobile-nav-links > a:hover {
+    color: #4169e1;
+}
+
+/* Update button styles to match across desktop and mobile */
+.nav-register button,
+.nav-register-mobile button {
+    min-width: 90px;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#signup, #signupMobile {
+    background-color: #4169e1;
+    color: white;
+    box-shadow: 0 1px 3px rgba(65, 105, 225, 0.2);
+}
+
+#login, #loginMobile {
+    background-color: #f8f9fa;
+    color: #4169e1;
+    border: 1.5px solid #4169e1;
+}
+
+#signup:hover, #signupMobile:hover {
+    background-color: #3554b0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(65, 105, 225, 0.3);
+}
+
+#login:hover, #loginMobile:hover {
+    background-color: #e8eeff;
+    transform: translateY(-1px);
+}
+
+/* Add new mobile sub-menu styles */
+.mobile-sub-item {
+    border-left: 2px solid #e8eeff;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.mobile-sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.mobile-sub-header p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mobile-sub-header i {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.mobile-sub-header.active i {
+    transform: rotate(180deg);
+    color: #4169e1;
+}
+
+.mobile-sub-dropdown {
+    display: none;
+    padding-left: 1rem;
+}
+
+.mobile-sub-dropdown.active {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+.mobile-sub-dropdown a {
+    padding: 0.6rem 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.mobile-sub-dropdown a:hover {
+    color: #4169e1;
+    background-color: #f0f4ff;
+    border-radius: 4px;
+}
+
+/* Add hover effects to nav items */
+.nav-item > a:hover {
+    color: #4169e1;
+}
+
+.mobile-nav-header:hover {
+    color: #4169e1;
+}
+
+/* Update mobile menu animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 /* Hero Section */
