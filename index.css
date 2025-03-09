@@ -211,7 +211,7 @@ body {
     /* Match navbar height */
     left: -100%;
     width: 100%;
-    height: 100dvh; /* Full height */
+    height: 90dvh; /* Full height */
     background-color: white;
     transition: left 0.3s ease-in-out;
     z-index: 999;
