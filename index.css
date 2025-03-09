@@ -782,13 +782,11 @@ body {
 
 /*Footer section*/
 .footer {
-    background: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
+    background: linear-gradient(to bottom, #111827, #1f2937);
     color: white;
     padding: 3rem 10%;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: none;
-    /* Remove margin-top */
 }
 
 .footer-container {
@@ -800,19 +798,21 @@ body {
 }
 
 .footer-logo h2 {
+    color: white;
     font-size: 2.2rem;
     font-family: 'Bebas Neue', sans-serif;
 }
 
 .footer-logo p {
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.1rem;
-    color: #f0f0f0;
     max-width: 300px;
     margin-top: 5px;
 }
 
 .footer-socials p,
 .footer-contact p {
+    color: white;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -829,20 +829,29 @@ body {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     font-size: 1.3rem;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+}
+
+.social-icons a i {
+    color: #fff;
 }
 
 .social-icons a:hover {
     background: #4169e1;
-    transform: scale(1.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(65, 105, 225, 0.4);
+}
+
+.social-icons a:hover i {
+    color: white;
 }
 
 .contact-info a p {
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1rem;
-    color: #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -850,7 +859,7 @@ body {
 }
 
 .contact-info i {
-    color: #4169e1;
+    color: #60a5fa; /* Brighter blue */
     font-size: 1.2rem;
 }
 
@@ -861,12 +870,12 @@ body {
 .footer-bottom {
     margin-top: 30px;
     padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom p {
+    color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
-    color: #cccccc;
 }
 
 /* Responsive Design */
