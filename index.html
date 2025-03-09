@@ -127,14 +127,39 @@
                 </div>
             </div>
 
+            <!-- Replace the nav-register div with this when user is logged in -->
+            <!-- Logged out state (default) -->
             <div class="nav-register">
-                <a href="login-signup.html">
-                    <button type="button" id="signup">Sign Up</button>
-                </a>
-                <a href="login-signup.html">
-                    <button type="button" id="login">Login</button>
-                </a>
+                <button id="login">Login</button>
+                <button id="signup">Sign Up</button>
             </div>
+
+            <!-- Logged in state (commented out) -->
+            <!--
+            <div class="nav-register">
+                <div class="user-menu">
+                    <div class="user-info">
+                        <i class="fas fa-user"></i>
+                        <span class="username">Username</span>
+                    </div>
+                    <div class="settings-dropdown">
+                        <button class="settings-btn">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <div class="settings-menu">
+                            <a href="#" class="settings-item">
+                                <i class="fas fa-key"></i>
+                                Change Password
+                            </a>
+                            <a href="#" class="settings-item">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
             <!-- Hamburger icon for mobile view -->
             <div class="hamburger">
                 <span></span>
@@ -270,10 +295,25 @@
                     <p>Resources</p>
                 </a>
             </div>
+            <!-- Mobile menu logged out state (default) -->
             <div class="nav-register-mobile">
-                <a href="login-signup.html"><button type="button" id="signupMobile">Sign Up</button></a>
-                <a href="login-signup.html"><button type="button" id="loginMobile">Login</button></a>
+                <button id="loginMobile">Login</button>
+                <button id="signupMobile">Sign Up</button>
             </div>
+
+            <!-- Mobile menu logged in state (commented out) -->
+            <!--
+            <div class="nav-register-mobile logged-in">
+                <button id="changePasswordMobile">
+                    <i class="fas fa-key"></i>
+                    Change Password
+                </button>
+                <button id="logoutMobile">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+            -->
         </div>
     </nav>
     

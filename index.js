@@ -124,6 +124,22 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.style.top = '';
         }
     });
+
+    // Handle settings button click (optional if you want click instead of hover)
+    const settingsBtn = document.querySelector('.settings-btn');
+    const settingsMenu = document.querySelector('.settings-menu');
+    
+    if (settingsBtn && settingsMenu) {
+        settingsBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            settingsMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', () => {
+            settingsMenu.classList.remove('active');
+        });
+    }
 });
 
 
