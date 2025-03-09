@@ -15,6 +15,7 @@ body {
 }
 
 /* Nav Bar styling */
+
 .nav-bar {
     width: 100dvw;
     height: 4rem;
@@ -22,13 +23,10 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: white;
-
-    /*Sticky navbar*/
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 1000;
-
-    /* for positioning the expanded mobile menu */
     padding: 0 1rem;
 }
 
@@ -52,17 +50,18 @@ body {
 
 /* Update mega-dropdown positioning */
 .mega-dropdown {
-    position: fixed; /* Change from absolute to fixed */
+    position: fixed;
+    /* Change from absolute to fixed */
     top: 4rem;
     left: 0;
     width: 100%;
-    background: white;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    background: white; /* Changed to solid white */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
+    transform: translateY(8px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 999;
 }
 
 .nav-item:hover .mega-dropdown {
@@ -201,14 +200,15 @@ body {
     .mega-dropdown {
         display: none;
     }
-    
+
     /* Add any specific mobile dropdown styles here */
 }
 
 /* Mobile Menu Styles */
 .mobile-menu {
     position: fixed;
-    top: 4rem; /* Match navbar height */
+    top: 4rem;
+    /* Match navbar height */
     left: -100%;
     width: 100%;
     height: calc(100vh - 4rem);
@@ -216,6 +216,7 @@ body {
     transition: left 0.3s ease-in-out;
     z-index: 999;
     padding: 2rem 1.5rem;
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom)); /* Add safe area padding */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -346,6 +347,7 @@ body {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -353,7 +355,7 @@ body {
 }
 
 /* Add Resources link styling */
-.mobile-nav-links > a {
+.mobile-nav-links>a {
     padding: 1rem 0;
     font-size: 1.1rem;
     font-weight: 500;
@@ -361,7 +363,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.mobile-nav-links > a:hover {
+.mobile-nav-links>a:hover {
     color: #4169e1;
 }
 
@@ -378,25 +380,29 @@ body {
     cursor: pointer;
 }
 
-#signup, #signupMobile {
+#signup,
+#signupMobile {
     background-color: #4169e1;
     color: white;
     box-shadow: 0 1px 3px rgba(65, 105, 225, 0.2);
 }
 
-#login, #loginMobile {
+#login,
+#loginMobile {
     background-color: #f8f9fa;
     color: #4169e1;
     border: 1.5px solid #4169e1;
 }
 
-#signup:hover, #signupMobile:hover {
+#signup:hover,
+#signupMobile:hover {
     background-color: #3554b0;
     transform: translateY(-1px);
     box-shadow: 0 2px 4px rgba(65, 105, 225, 0.3);
 }
 
-#login:hover, #loginMobile:hover {
+#login:hover,
+#loginMobile:hover {
     background-color: #e8eeff;
     transform: translateY(-1px);
 }
@@ -456,7 +462,7 @@ body {
 }
 
 /* Add hover effects to nav items */
-.nav-item > a:hover {
+.nav-item>a:hover {
     color: #4169e1;
 }
 
@@ -470,13 +476,12 @@ body {
         opacity: 0;
         transform: translateY(-8px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-
 
 /* Hero Section */
 .hero {
@@ -536,7 +541,8 @@ body {
         flex-direction: column;
         text-align: center;
         justify-content: flex-start;
-        padding-top: 3rem;
+        padding-top: 1rem; /* Reduce top padding */
+        margin-top: 4rem; /* Match navbar height */
     }
 
     .hero-content {
@@ -548,7 +554,6 @@ body {
         margin-top: 1rem;
     }
 }
-
 
 /* User Feedback Section */
 .user-feedback {
@@ -678,11 +683,10 @@ body {
     }
 }
 
-
 /* Courses Section */
 .courses {
     text-align: center;
-    padding: 4rem 10%;
+    padding: 4rem 10% 4rem; /* Add back bottom padding */
     background: #f4f7fc;
 }
 
@@ -776,17 +780,15 @@ body {
     transform: scale(1.05);
 }
 
-
-
-
 /*Footer section*/
 .footer {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
     color: white;
     padding: 3rem 10%;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: none;
+    /* Remove margin-top */
 }
 
 .footer-container {
@@ -804,7 +806,7 @@ body {
 
 .footer-logo p {
     font-size: 1.1rem;
-    color: #ddd;
+    color: #f0f0f0;
     max-width: 300px;
     margin-top: 5px;
 }
@@ -840,7 +842,7 @@ body {
 
 .contact-info a p {
     font-size: 1rem;
-    color: #ddd;
+    color: #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -864,7 +866,7 @@ body {
 
 .footer-bottom p {
     font-size: 1rem;
-    color: #bbb;
+    color: #cccccc;
 }
 
 /* Responsive Design */
@@ -876,5 +878,83 @@ body {
 
     .social-icons {
         justify-content: center;
+    }
+}
+
+/* Add new dropdown overlay styles */
+.dropdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .dropdown-overlay {
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-bar {
+        background-color: white;
+    }
+    
+    .mega-dropdown {
+        background-color: white;
+    }
+}
+
+.main-content {
+    transition: filter 0.3s ease;
+    margin-top: 4rem;
+    min-height: 100vh;
+    /* Fix iOS Safari scrolling */
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-item:hover~.main-content,
+.main-content.blur-active {
+    filter: blur(20px) brightness(0.8);
+    pointer-events: none;
+}
+
+/* Remove previous dropdown-overlay styles as they're no longer needed */
+
+@media (max-width: 768px) {
+
+    .nav-item:hover~.main-content,
+    .main-content.blur-active {
+        filter: none;
+        pointer-events: auto;
+    }
+
+    .nav-bar {
+        position: fixed;
+        top: 0; /* Keep at top */
+        height: 4rem;
+        padding-bottom: 0; /* Remove bottom padding */
+    }
+
+    .main-content {
+        margin-top: 0; /* Remove top margin from main content */
+        min-height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    /* Update login button styles */
+    .login-btn {
+        margin-bottom: 0; /* Remove bottom margin */
+        position: relative;
+        z-index: 1001;
     }
 }

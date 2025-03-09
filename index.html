@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Learn Hub</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -18,27 +18,148 @@
 </head>
 
 <body>
-    <!-- Navbar section -->
-    <div class="nav-bar">
+    <nav class="navbar">
+        <div class="nav-bar">
 
-        <div class="nav-section">
-            <div class="logo">
-                <a href="#">
-                    <p style="font-size: 2rem; font-family: 'Bebas Neue', sans-serif; font-weight: bold;">
-                        Learn <span
-                            style="color: blue; font-family: 'Bebas Neue', sans-serif; font-weight: bold;">H</span>ub
-                    </p>
+            <div class="nav-section">
+                <div class="logo">
+                    <a href="#">
+                        <p style="font-size: 2rem; font-family: 'Bebas Neue', sans-serif; font-weight: bold;">
+                            Learn <span
+                                style="color: blue; font-family: 'Bebas Neue', sans-serif; font-weight: bold;">H</span>ub
+                        </p>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <div class="nav-item">
+                        <a href="#">
+                            <p>Course</p>
+                        </a>
+                        <div class="mega-dropdown">
+                            <div class="mega-content">
+                                <div class="dropdown-column">
+                                    <h3>Programming</h3>
+                                    <a href="#">
+                                        <p>JavaScript</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>Python</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>Java</p>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h3>Web Development</h3>
+                                    <a href="#">
+                                        <p>HTML & CSS</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>React</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>Node.js</p>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h3>Data Science</h3>
+                                    <a href="#">
+                                        <p>Machine Learning</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>Data Analysis</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>Statistics</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">
+                            <p>Challenges</p>
+                        </a>
+                        <div class="mega-dropdown">
+                            <div class="mega-content">
+                                <div class="dropdown-column">
+                                    <h3>Coding Challenges</h3>
+                                    <a href="#">
+                                        <p>Algorithm Problems</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>Daily Challenges</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>Weekly Contests</p>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h3>Project Challenges</h3>
+                                    <a href="#">
+                                        <p>Frontend Projects</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>Backend Projects</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>Full Stack Projects</p>
+                                    </a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h3>Practice Areas</h3>
+                                    <a href="#">
+                                        <p>Data Structures</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>System Design</p>
+                                    </a>
+                                    <a href="#">
+                                        <p>Database Design</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <p>Reasources</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-register">
+                <a href="login-signup.html">
+                    <button type="button" id="signup">Sign Up</button>
+                </a>
+                <a href="login-signup.html">
+                    <button type="button" id="login">Login</button>
                 </a>
             </div>
-            <div class="nav-links">
-                <div class="nav-item">
-                    <a href="#">
+            <!-- Hamburger icon for mobile view -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <!-- Update mobile menu structure -->
+        <div class="mobile-menu">
+            <div class="mobile-nav-links">
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-header">
                         <p>Course</p>
-                    </a>
-                    <div class="mega-dropdown">
-                        <div class="mega-content">
-                            <div class="dropdown-column">
-                                <h3>Programming</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <div class="mobile-sub-item">
+                            <div class="mobile-sub-header">
+                                <p>Programming</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="mobile-sub-dropdown">
                                 <a href="#">
                                     <p>JavaScript</p>
                                 </a>
@@ -49,8 +170,13 @@
                                     <p>Java</p>
                                 </a>
                             </div>
-                            <div class="dropdown-column">
-                                <h3>Web Development</h3>
+                        </div>
+                        <div class="mobile-sub-item">
+                            <div class="mobile-sub-header">
+                                <p>Web Development</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="mobile-sub-dropdown">
                                 <a href="#">
                                     <p>HTML & CSS</p>
                                 </a>
@@ -61,8 +187,13 @@
                                     <p>Node.js</p>
                                 </a>
                             </div>
-                            <div class="dropdown-column">
-                                <h3>Data Science</h3>
+                        </div>
+                        <div class="mobile-sub-item">
+                            <div class="mobile-sub-header">
+                                <p>Data Science</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="mobile-sub-dropdown">
                                 <a href="#">
                                     <p>Machine Learning</p>
                                 </a>
@@ -76,14 +207,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="nav-item">
-                    <a href="#">
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-header">
                         <p>Challenges</p>
-                    </a>
-                    <div class="mega-dropdown">
-                        <div class="mega-content">
-                            <div class="dropdown-column">
-                                <h3>Coding Challenges</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <div class="mobile-sub-item">
+                            <div class="mobile-sub-header">
+                                <p>Coding Challenges</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="mobile-sub-dropdown">
                                 <a href="#">
                                     <p>Algorithm Problems</p>
                                 </a>
@@ -94,8 +229,13 @@
                                     <p>Weekly Contests</p>
                                 </a>
                             </div>
-                            <div class="dropdown-column">
-                                <h3>Project Challenges</h3>
+                        </div>
+                        <div class="mobile-sub-item">
+                            <div class="mobile-sub-header">
+                                <p>Project Challenges</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="mobile-sub-dropdown">
                                 <a href="#">
                                     <p>Frontend Projects</p>
                                 </a>
@@ -106,8 +246,13 @@
                                     <p>Full Stack Projects</p>
                                 </a>
                             </div>
-                            <div class="dropdown-column">
-                                <h3>Practice Areas</h3>
+                        </div>
+                        <div class="mobile-sub-item">
+                            <div class="mobile-sub-header">
+                                <p>Practice Areas</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="mobile-sub-dropdown">
                                 <a href="#">
                                     <p>Data Structures</p>
                                 </a>
@@ -122,251 +267,109 @@
                     </div>
                 </div>
                 <a href="#">
-                    <p>Reasources</p>
+                    <p>Resources</p>
                 </a>
             </div>
+            <div class="nav-register-mobile">
+                <a href="login-signup.html"><button type="button" id="signupMobile">Sign Up</button></a>
+                <a href="login-signup.html"><button type="button" id="loginMobile">Login</button></a>
+            </div>
         </div>
+    </nav>
+    
+    <main class="main-content">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Learn Hub</h1>
+                <p>Master new skills and take on exciting challenges to level up your knowledge.</p>
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/illustrations/business-profile.png" alt="Learning Illustration">
+            </div>
+        </header>
 
-        <div class="nav-register">
-            <a href="login-signup.html">
-                <button type="button" id="signup">Sign Up</button>
-            </a>
-            <a href="login-signup.html">
-                <button type="button" id="login">Login</button>
-            </a>
-        </div>
-        <!-- Hamburger icon for mobile view -->
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-
-    <div class="overlay"></div>
-
-    <!-- Update mobile menu structure -->
-    <div class="mobile-menu">
-        <div class="mobile-nav-links">
-            <div class="mobile-nav-item">
-                <div class="mobile-nav-header">
-                    <p>Course</p>
-                    <i class="fas fa-chevron-down"></i>
+        <!-- User Feedback Section -->
+        <section class="user-feedback">
+            <h2>Don't Take Our Word for It – Hear from Our Users!</h2>
+            <p>See what our users say about their learning experience.</p>
+            <div class="feedback-container">
+                <div class="feedback-card">
+                    <h3>"Learn Hub has transformed the way I learn!"</h3>
+                    <p>The interactive challenges keep me engaged and motivated.</p>
+                    <h4>- Jane Doe</h4>
                 </div>
-                <div class="mobile-dropdown">
-                    <div class="mobile-sub-item">
-                        <div class="mobile-sub-header">
-                            <p>Programming</p>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="mobile-sub-dropdown">
-                            <a href="#">
-                                <p>JavaScript</p>
-                            </a>
-                            <a href="#">
-                                <p>Python</p>
-                            </a>
-                            <a href="#">
-                                <p>Java</p>
-                            </a>
-                        </div>
+                <div class="feedback-card">
+                    <h3>"A seamless experience!"</h3>
+                    <p>Finding courses is easy, and the community is incredibly helpful.</p>
+                    <h4>- John Smith</h4>
+                </div>
+                <div class="feedback-card">
+                    <h3>"Best platform for upskilling!"</h3>
+                    <p>The personalized progress tracking has been a game changer for me.</p>
+                    <h4>- Emily Johnson</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- learn more Section -->
+        <section class="detailed-hero">
+            <div class="detailed-text">
+                <h2>Take Your Learning to the Next Level</h2>
+                <p>At Learn Hub, we provide structured courses, interactive challenges, and a supportive community to help
+                    you grow your skills efficiently.</p>
+                <ul>
+                    <li>✔ Expert-led courses designed for real-world applications</li>
+                    <li>✔ Hands-on challenges to reinforce learning</li>
+                    <li>✔ A vibrant community to support your journey</li>
+                </ul>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+            <div class="detailed-image">
+                <img src="assets/illustrations/css3.png" alt="Learning Illustration">
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section class="courses">
+            <h2>Start Your Journey with Code</h2>
+            <p>Build your skills with our carefully crafted courses.</p>
+            <div class="courses-container">
+
+                <!-- HTML Course -->
+                <div class="course-card html-card">
+                    <div class="icon">
+                        <i class="fab fa-html5"></i>
                     </div>
-                    <div class="mobile-sub-item">
-                        <div class="mobile-sub-header">
-                            <p>Web Development</p>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="mobile-sub-dropdown">
-                            <a href="#">
-                                <p>HTML & CSS</p>
-                            </a>
-                            <a href="#">
-                                <p>React</p>
-                            </a>
-                            <a href="#">
-                                <p>Node.js</p>
-                            </a>
-                        </div>
+                    <h3>HTML Fundamentals</h3>
+                    <p>Master the foundation of web development by learning HTML.</p>
+                    <a href="#" class="course-link">Start Learning →</a>
+                </div>
+
+                <!-- CSS Course -->
+                <div class="course-card css-card">
+                    <div class="icon">
+                        <i class="fab fa-css3-alt"></i>
                     </div>
-                    <div class="mobile-sub-item">
-                        <div class="mobile-sub-header">
-                            <p>Data Science</p>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="mobile-sub-dropdown">
-                            <a href="#">
-                                <p>Machine Learning</p>
-                            </a>
-                            <a href="#">
-                                <p>Data Analysis</p>
-                            </a>
-                            <a href="#">
-                                <p>Statistics</p>
-                            </a>
-                        </div>
+                    <h3>CSS Mastery</h3>
+                    <p>Style your websites like a pro with modern CSS techniques.</p>
+                    <a href="#" class="course-link">Start Learning →</a>
+                </div>
+
+                <!-- JavaScript Course -->
+                <div class="course-card js-card">
+                    <div class="icon">
+                        <i class="fab fa-js-square"></i>
                     </div>
+                    <h3>JavaScript Essentials</h3>
+                    <p>Bring your websites to life with JavaScript interactivity.</p>
+                    <a href="#" class="course-link">Start Learning →</a>
                 </div>
-            </div>
-            <div class="mobile-nav-item">
-                <div class="mobile-nav-header">
-                    <p>Challenges</p>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="mobile-dropdown">
-                    <div class="mobile-sub-item">
-                        <div class="mobile-sub-header">
-                            <p>Coding Challenges</p>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="mobile-sub-dropdown">
-                            <a href="#">
-                                <p>Algorithm Problems</p>
-                            </a>
-                            <a href="#">
-                                <p>Daily Challenges</p>
-                            </a>
-                            <a href="#">
-                                <p>Weekly Contests</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mobile-sub-item">
-                        <div class="mobile-sub-header">
-                            <p>Project Challenges</p>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="mobile-sub-dropdown">
-                            <a href="#">
-                                <p>Frontend Projects</p>
-                            </a>
-                            <a href="#">
-                                <p>Backend Projects</p>
-                            </a>
-                            <a href="#">
-                                <p>Full Stack Projects</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mobile-sub-item">
-                        <div class="mobile-sub-header">
-                            <p>Practice Areas</p>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="mobile-sub-dropdown">
-                            <a href="#">
-                                <p>Data Structures</p>
-                            </a>
-                            <a href="#">
-                                <p>System Design</p>
-                            </a>
-                            <a href="#">
-                                <p>Database Design</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <p>Resources</p>
-            </a>
-        </div>
-        <div class="nav-register-mobile">
-            <a href="login-signup.html"><button type="button" id="signupMobile">Sign Up</button></a>
-            <a href="login-signup.html"><button type="button" id="loginMobile">Login</button></a>
-        </div>
-    </div>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Learn Hub</h1>
-            <p>Master new skills and take on exciting challenges to level up your knowledge.</p>
-            <a href="#" class="cta-button">Get Started</a>
-        </div>
-        <div class="hero-image">
-            <img src="assets/illustrations/business-profile.png" alt="Learning Illustration">
-        </div>
-    </header>
-
-    <!-- User Feedback Section -->
-    <section class="user-feedback">
-        <h2>Don't Take Our Word for It – Hear from Our Users!</h2>
-        <p>See what our users say about their learning experience.</p>
-        <div class="feedback-container">
-            <div class="feedback-card">
-                <h3>"Learn Hub has transformed the way I learn!"</h3>
-                <p>The interactive challenges keep me engaged and motivated.</p>
-                <h4>- Jane Doe</h4>
             </div>
-            <div class="feedback-card">
-                <h3>"A seamless experience!"</h3>
-                <p>Finding courses is easy, and the community is incredibly helpful.</p>
-                <h4>- John Smith</h4>
-            </div>
-            <div class="feedback-card">
-                <h3>"Best platform for upskilling!"</h3>
-                <p>The personalized progress tracking has been a game changer for me.</p>
-                <h4>- Emily Johnson</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- learn more Section -->
-    <section class="detailed-hero">
-        <div class="detailed-text">
-            <h2>Take Your Learning to the Next Level</h2>
-            <p>At Learn Hub, we provide structured courses, interactive challenges, and a supportive community to help
-                you grow your skills efficiently.</p>
-            <ul>
-                <li>✔ Expert-led courses designed for real-world applications</li>
-                <li>✔ Hands-on challenges to reinforce learning</li>
-                <li>✔ A vibrant community to support your journey</li>
-            </ul>
-            <a href="#" class="learn-more-btn">Learn More</a>
-        </div>
-        <div class="detailed-image">
-            <img src="assets/illustrations/css3.png" alt="Learning Illustration">
-        </div>
-    </section>
-
-    <!-- Courses Section -->
-    <section class="courses">
-        <h2>Start Your Journey with Code</h2>
-        <p>Build your skills with our carefully crafted courses.</p>
-        <div class="courses-container">
-
-            <!-- HTML Course -->
-            <div class="course-card html-card">
-                <div class="icon">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <h3>HTML Fundamentals</h3>
-                <p>Master the foundation of web development by learning HTML.</p>
-                <a href="#" class="course-link">Start Learning →</a>
-            </div>
-
-            <!-- CSS Course -->
-            <div class="course-card css-card">
-                <div class="icon">
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <h3>CSS Mastery</h3>
-                <p>Style your websites like a pro with modern CSS techniques.</p>
-                <a href="#" class="course-link">Start Learning →</a>
-            </div>
-
-            <!-- JavaScript Course -->
-            <div class="course-card js-card">
-                <div class="icon">
-                    <i class="fab fa-js-square"></i>
-                </div>
-                <h3>JavaScript Essentials</h3>
-                <p>Bring your websites to life with JavaScript interactivity.</p>
-                <a href="#" class="course-link">Start Learning →</a>
-            </div>
-
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer section -->
     <footer class="footer">
